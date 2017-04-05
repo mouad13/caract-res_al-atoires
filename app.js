@@ -11,14 +11,17 @@ function chaine( nbCaracteres ){
 
 }
  
-function tableaujs (nblignes, nbcolones){
+function tableaujs (nblignes, nbcolones, nbCaracteres){
 	var tableau = [];
-	
+
 	for( var i=0 ; i<nblignes ; i++ ){	    
 	tableau.push( [] );
 
 		for( var j=0 ; j<nbcolones ; j++ ){ 
-		tableau[i].push( j );
+		
+		var machaine = chaine(nbCaracteres);
+		tableau[i].push( machaine );
+		
 		}
 	}
 
@@ -27,4 +30,4 @@ function tableaujs (nblignes, nbcolones){
 
 chaine(10);
 
-tableaujs(5, 4);
+tableaujs(4, 10, 10);
