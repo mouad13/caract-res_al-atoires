@@ -11,6 +11,10 @@ function chaine( nbCaracteres ){
 
 }
  
+
+
+
+
 function tableaujs (nblignes, nbcolones, nbCaracteres){
 	var tableau = [];
 
@@ -24,10 +28,24 @@ function tableaujs (nblignes, nbcolones, nbCaracteres){
 		
 		}
 	}
-
-	console.log(tableau);
+	return tableau;
 }
 
-chaine(10);
 
-tableaujs(4, 10, 10);
+
+chaine();
+var result = tableaujs(10, 10, 3);
+
+//tableaujs(10, 10, 3);
+	console.log(result);
+
+for (i = 0; i < result.length; i++) {
+	 $("#table").append('<tr></tr>');
+		
+	for (j = 0; j < result[i].length; j++) {
+		$("#table").append('<td>'+result[i][j]+'</td>');
+			
+		}
+	
+}
+
