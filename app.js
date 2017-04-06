@@ -31,21 +31,32 @@ function tableaujs (nblignes, nbcolones, nbCaracteres){
 	return tableau;
 }
 
-
-
 chaine();
-var result = tableaujs(10, 10, 3);
 
-//tableaujs(10, 10, 3);
-	console.log(result);
 
-for (i = 0; i < result.length; i++) {
-	 $("#table").append('<tr></tr>');
-		
-	for (j = 0; j < result[i].length; j++) {
-		$("#table").append('<td>'+result[i][j]+'</td>');
-			
-		}
+function tableauhtml (nblignes, nbcolones, nbCaracteres){
+	var result = tableaujs(10, 10, 3);
 	
-}
+	$("thead tr").append('<th>');
+
+	for (n = 0; n < result.length  ; n++) {
+		$("thead tr").append('<th><input type="radio" name="inlineRadioOptions"></th>');
+	}
+
+
+	for (i = 0; i < nblignes; i++) {
+		var lignes = $('<tr class=""></tr>');
+		var radio = $('<input type="radio" name="inlineRadioOptions">')
+		lignes.append(radio);
+
+		for (j = 0; j < nbcolones; j++) {
+			lignes.append('<td>'+result[i][j]+'</td>');
+			$("#table").append(lignes);
+				
+		}
+		
+	}
+};	
+	
+	tableauhtml(10, 10, 3);
 
