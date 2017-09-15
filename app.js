@@ -37,16 +37,16 @@ chaine();
 function tableauhtml (nblignes, nbcolones, nbCaracteres){
 	var result = tableaujs(10, 10, 3);
 	
-	$("thead tr").append('<th>');
+	$("thead tr").append('<th bgcolor = "gray">#</th>');
 
 	for (n = 0; n < result.length  ; n++) {
-		$("thead tr").append('<th><input type="radio" name="inlineRadioOptions"></th>');
+		$("thead tr").append('<th bgcolor = "blue"><input type="radio" name="inlineRadioOptions1"></th>');
 	}
 
 
 	for (i = 0; i < nblignes; i++) {
 		var lignes = $('<tr class=""></tr>');
-		var radio = $('<input type="radio" name="inlineRadioOptions">')
+		var radio = $('<td bgcolor = "blue"><input type="radio" name="inlineRadioOptions"></td>')
 		lignes.append(radio);
 
 		for (j = 0; j < nbcolones; j++) {
